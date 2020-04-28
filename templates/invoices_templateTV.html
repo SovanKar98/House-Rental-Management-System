@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the invoices_init() hook (in hooks/invoices.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="invoices-tenant-<%%VALUE(id)%%>" class="invoices-tenant"><%%SELECT%%><%%VALUE(tenant)%%><%%ENDSELECT%%></td>
+		<td id="invoices-phone-<%%VALUE(id)%%>" class="invoices-phone"><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="invoices-house-<%%VALUE(id)%%>" class="invoices-house"><%%SELECT%%><%%VALUE(house)%%><%%ENDSELECT%%></td>
+		<td id="invoices-year-<%%VALUE(id)%%>" class="invoices-year"><%%SELECT%%><%%VALUE(year)%%><%%ENDSELECT%%></td>
+		<td id="invoices-month-<%%VALUE(id)%%>" class="invoices-month"><%%SELECT%%><%%VALUE(month)%%><%%ENDSELECT%%></td>
+		<td id="invoices-particulars-<%%VALUE(id)%%>" class="invoices-particulars"><%%SELECT%%><%%VALUE(particulars)%%><%%ENDSELECT%%></td>
+		<td id="invoices-total-<%%VALUE(id)%%>" class="invoices-total"><%%SELECT%%><%%VALUE(total)%%><%%ENDSELECT%%></td>
+		<td id="invoices-status-<%%VALUE(id)%%>" class="invoices-status"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="invoices-comments-<%%VALUE(id)%%>" class="invoices-comments"><%%SELECT%%><%%VALUE(comments)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the payments_init() hook (in hooks/payments.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="payments-tenant-<%%VALUE(id)%%>" class="payments-tenant"><%%SELECT%%><%%VALUE(tenant)%%><%%ENDSELECT%%></td>
+		<td id="payments-house-<%%VALUE(id)%%>" class="payments-house"><%%SELECT%%><%%VALUE(house)%%><%%ENDSELECT%%></td>
+		<td id="payments-year-<%%VALUE(id)%%>" class="payments-year"><%%SELECT%%><%%VALUE(year)%%><%%ENDSELECT%%></td>
+		<td id="payments-month-<%%VALUE(id)%%>" class="payments-month"><%%SELECT%%><%%VALUE(month)%%><%%ENDSELECT%%></td>
+		<td id="payments-expected_amount-<%%VALUE(id)%%>" class="payments-expected_amount"><%%SELECT%%><%%VALUE(expected_amount)%%><%%ENDSELECT%%></td>
+		<td id="payments-paid_amount-<%%VALUE(id)%%>" class="payments-paid_amount"><%%SELECT%%><%%VALUE(paid_amount)%%><%%ENDSELECT%%></td>
+		<td id="payments-balance-<%%VALUE(id)%%>" class="payments-balance"><%%SELECT%%><%%VALUE(balance)%%><%%ENDSELECT%%></td>
+		<td id="payments-date-<%%VALUE(id)%%>" class="payments-date"><%%SELECT%%><%%VALUE(date)%%><%%ENDSELECT%%></td>
+		<td id="payments-comments-<%%VALUE(id)%%>" class="payments-comments"><%%SELECT%%><%%VALUE(comments)%%><%%ENDSELECT%%></td>

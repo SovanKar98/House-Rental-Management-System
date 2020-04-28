@@ -1,0 +1,20 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the tenants_init() hook (in hooks/tenants.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="tenants-fullname-<%%VALUE(id)%%>" class="tenants-fullname"><%%SELECT%%><%%VALUE(fullname)%%><%%ENDSELECT%%></td>
+		<td id="tenants-gender-<%%VALUE(id)%%>" class="tenants-gender"><%%SELECT%%><%%VALUE(gender)%%><%%ENDSELECT%%></td>
+		<td id="tenants-national_id-<%%VALUE(id)%%>" class="tenants-national_id"><%%SELECT%%><%%VALUE(national_id)%%><%%ENDSELECT%%></td>
+		<td id="tenants-phone_number-<%%VALUE(id)%%>" class="tenants-phone_number"><%%SELECT%%><%%VALUE(phone_number)%%><%%ENDSELECT%%></td>
+		<td id="tenants-email-<%%VALUE(id)%%>" class="tenants-email"><a href="mailto:<%%VALUE(email)%%>" title="<%%VALUE(email)%%>" class="btn btn-default"><i class="glyphicon glyphicon-envelope text-info"></i></a></td>
+		<td id="tenants-registration_date-<%%VALUE(id)%%>" class="tenants-registration_date"><%%SELECT%%><%%VALUE(registration_date)%%><%%ENDSELECT%%></td>
+		<td id="tenants-house-<%%VALUE(id)%%>" class="tenants-house"><%%SELECT%%><%%VALUE(house)%%><%%ENDSELECT%%></td>
+		<td id="tenants-agreement_document-<%%VALUE(id)%%>" class="tenants-agreement_document"><a href="link.php?t=tenants&f=agreement_document&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(agreement_document)%%>" class="btn btn-default"><i class="glyphicon glyphicon-file text-info"></i></a></td>
+		<td id="tenants-status-<%%VALUE(id)%%>" class="tenants-status"><%%SELECT%%><%%VALUE(status)%%><%%ENDSELECT%%></td>
+		<td id="tenants-exit_date-<%%VALUE(id)%%>" class="tenants-exit_date"><%%SELECT%%><%%VALUE(exit_date)%%><%%ENDSELECT%%></td>
+		<script>$j(function(){
+			var e_agreement_document = '<%%VALUE(agreement_document)%%>'; if(e_agreement_document == '' || e_agreement_document == '&nbsp;') $j(/*<*/ '#tenants-agreement_document-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>
